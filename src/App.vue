@@ -5,7 +5,7 @@
     <!-- Top Bar Start -->
     <div class="topbar-mobile">
         <div class="logo">
-            <router-link to="/"><img src="images/logo.png" alt="Mark. Est. 1985" class="" style="height: 44px;"></router-link>
+            <router-link to="/"><img src="/images/logo.png" alt="Mark. Est. 1985" class="" style="height: 44px;"></router-link>
             <button class="button-menu-mobile">
                 <i class="mdi mdi-menu"></i>
             </button>
@@ -19,7 +19,7 @@
         <div class="slimscroll-menu" id="remove-scroll">
 
             <div class="logo">
-                <a href="/"><img src="images/logo.png" alt="Mark. Est. 1985" class="" style="height: 180px;"></a>
+                <router-link to="/"><img src="/images/logo.png" alt="Mark. Est. 1985" class="" style="height: 180px;"></router-link>
                 <p class="text-muted">Software. Productivity. Sleep. And whatever else sticks. </p>
             </div>
 
@@ -29,40 +29,15 @@
                 <ul class="metismenu" id="side-menu">
                     
                     <li>
-                        <a href="index.html"><span> Home</span></a>
+                        <router-link to="/"><span> Home</span></router-link>
                     </li>
 
                     <li>
-                        <a href="javascript: void(0);"><span> Features </span></a>
-                        <ul class="nav-second-level" aria-expanded="false">
-                            <li><a href="standard-post.html">Standard Post</a></li>
-                            <li><a href="video-post.html">Video Post</a></li>
-                            <li><a href="audio-post.html">Audio Post</a></li>
-                            <li><a href="gallery-post.html">Gallery Post</a></li>
-                            <li><a href="quote-post.html">Quote Post</a></li>
-                            <li><a href="link-post.html">Link Post</a></li>
-                            <li><a href="404.html">Error 404</a></li>
-                        </ul>
+                        <router-link to="/about">About</router-link>
                     </li>
 
                     <li>
-                        <a href="javascript: void(0);"><span> Lifestyle </span></a>
-                    </li>
-
-                    <li>
-                        <a href="javascript: void(0);"><span> Travel </span></a>
-                    </li>
-
-                    <li>
-                        <a href="javascript: void(0);"><span> Music </span></a>
-                    </li>
-
-                    <li>
-                        <a href="about.html">About</a>
-                    </li>
-
-                    <li>
-                        <a href="contact.html">Contact</a>
+                        <router-link to="/contact">Contact</router-link>
                     </li>
 
                 </ul>

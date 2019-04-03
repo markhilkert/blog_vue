@@ -15,14 +15,14 @@
                                 <div class="post-header">
                                     <h2 class="post-title"> <router-link to="#">Sleep&#8212It's frustratingly Important.</router-link> </h2>
                                     <ul class="post-meta">
-                                        <li><i class="mdi mdi-calendar"></i> July 03, 2017</li>
-                                        <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">Sleep</a>, <a href="#">Productivity</a>, <a href="#">Lifestyle</a></li>
+                                        <li><i class="mdi mdi-calendar"></i> April 02, 2019</li>
+                                        <li><i class="mdi mdi-tag-text-outline"></i> <router-link to="/posts/1">Sleep</router-link>, <router-link to="/posts/1">Productivity</router-link>, <router-link to="/posts/1">Lifestyle</router-link></li>
                                         <!-- # of comments (once implemented) -->
                                     </ul>
                                 </div>
 
                                 <div class="post-preview">
-                                    <router-link to="/posts/1"><img src="images/blog/blog-1.jpg" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
+                                    <router-link to="/posts/1"><img src="/images/blog/blog-1.jpg" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
                                 </div>
 
                                 <div class="blog-detail-description">
@@ -60,22 +60,22 @@
 
                                     <p> Third, by sleeping short, I started the next day in a sleep deficit, and wasn’t learning optimally in class. Short sleep is known to impact your short-term memory (kind of like running your computer without the RAM functioning properly). This prevents you from understanding the concepts in the moment. </p>
 
-                                    <p> Finally, most weekends, I stayed out late drinking with my friends, thinking it wouldn’t affect my learning that had taken place the prior week. But by impairing my REM sleep over the weekend, I was preventing myself from fully understanding the concepts from the previous week. This effect compounded, week after week, and I ended up learning a lot less over the quarter. </p>
+                                    <p> Finally, most weekends, I stayed out late drinking with my friends, thinking it wouldn’t affect my learning that had taken place the prior week. But by impairing my REM sleep over the weekend, I was preventing myself from fully understanding the concepts from the previous week. This effect compounded, week after week, and I ended up learning less over the quarter. </p>
 
 
                                     <div class="mt-5">
                                         <h6>Tags:</h6>
                                         <div class="tagcloud">
-                                            <a href="#">logo</a>
-                                            <a href="#">business</a>
-                                            <a href="#">agency</a>
+                                            <router-link to="/posts/1">Sleep</router-link>
+                                            <router-link to="/posts/1">Productivity</router-link>
+                                            <router-link to="/posts/1">Lifestyle</router-link>
                                         </div>
                                     </div>
 
                                     <div class="media post-author-box">
                                         <img class="d-flex mr-3 rounded-circle" src="images/user/user-5.png" alt="Generic placeholder image">
                                         <div class="media-body">
-                                            <h4 class="media-heading"><a href="">Michelle Durant</a></h4>
+                                            <h4 class="media-heading"><router-link to="">Michelle Durant</router-link></h4>
                                             <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec metus. Mauris ultricies, justo eu convallis placerat, felis enim.</p>
 
                                             <ul class="socials list-unstyled mb-0 mt-3">
@@ -95,11 +95,11 @@
                                         <div class="col-sm-4">
                                             <article class="related-post">
                                                 <div class="post-preview">
-                                                    <a href="blog-single.html"><img src="images/blog/blog-2.jpg" alt="" class="img-fluid rounded"></a>
+                                                    <router-link to="blog-single.html"><img src="/images/blog/blog-2.jpg" alt="" class="img-fluid rounded"></router-link>
                                                 </div>
 
                                                 <div class="post-header">
-                                                    <h6><a href="single-post2.html" title="">15 Best Healthy and Easy Salad Recipes</a></h6>
+                                                    <h6><router-link to="single-post2.html" title="">15 Best Healthy and Easy Salad Recipes</router-link></h6>
                                                     <p class="post-date">August 12, 2017</p>
                                                 </div>
                                             </article>
@@ -107,11 +107,11 @@
                                         <div class="col-sm-4">
                                             <article class="related-post">
                                                 <div class="post-preview">
-                                                    <a href="blog-single.html"><img src="images/blog/blog-3.jpg" alt="" class="img-fluid rounded"></a>
+                                                    <router-link to="blog-single.html"><img src="/images/blog/blog-3.jpg" alt="" class="img-fluid rounded"></router-link>
                                                 </div>
 
                                                 <div class="post-header">
-                                                    <h6><a href="single-post2.html" title="">The planet doesn’t need saving. We do.</a></h6>
+                                                    <h6><router-link to="single-post2.html" title="">The planet doesn’t need saving. We do.</router-link></h6>
                                                     <p class="post-date">August 17, 2017</p>
                                                 </div>
                                             </article>
@@ -119,11 +119,11 @@
                                         <div class="col-sm-4">
                                             <article class="related-post">
                                                 <div class="post-preview">
-                                                    <a href="blog-single.html"><img src="images/blog/blog-4.jpg" alt="" class="img-fluid rounded"></a>
+                                                    <router-link to="blog-single.html"><img src="/images/blog/blog-4.jpg" alt="" class="img-fluid rounded"></router-link>
                                                 </div>
 
                                                 <div class="post-header">
-                                                    <h6><a href="single-post2.html" title="">Modern City With Amazing Dark Blue Sea</a></h6>
+                                                    <h6><router-link to="single-post2.html" title="">Modern City With Amazing Dark Blue Sea</router-link></h6>
                                                     <p class="post-date">August 20, 2017</p>
                                                 </div>
                                             </article>
@@ -157,7 +157,7 @@
                                     <div class="widget-title">About Me</div>
 
                                     <div class="text-center">
-                                        <img src="images/photo.jpg" alt="About Me" class="rounded-circle">
+                                        <img src="/images/photo.jpg" alt="About Me" class="rounded-circle">
 
                                         <p>Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet pede, consectetur neque risus.</p>
                                     </div>
@@ -195,10 +195,10 @@
                                     <div class="widget-title">Archives</div>
 
                                     <ul>
-                                        <li><a href="#">March 2017</a> (40)</li>
-                                        <li><a href="#">April 2017</a> (08)</li>
-                                        <li><a href="#">May 2017</a> (11)</li>
-                                        <li><a href="#">Jun 2017</a> (21)</li>
+                                        <li><router-link to="#">March 2017</router-link> (40)</li>
+                                        <li><router-link to="#">April 2017</router-link> (08)</li>
+                                        <li><router-link to="#">May 2017</router-link> (11)</li>
+                                        <li><router-link to="#">Jun 2017</router-link> (21)</li>
                                     </ul>
 
                                 </aside>
@@ -207,12 +207,12 @@
                                 <aside class="widget widget_tag_cloud">
                                     <div class="widget-title">Tags</div>
                                     <div class="tagcloud">
-                                        <a href="#">logo</a>
-                                        <a href="#">business</a>
-                                        <a href="#">corporate</a>
-                                        <a href="#">e-commerce</a>
-                                        <a href="#">agency</a>
-                                        <a href="#">responsive</a>
+                                        <router-link to="#">logo</router-link>
+                                        <router-link to="#">business</router-link>
+                                        <router-link to="#">corporate</router-link>
+                                        <router-link to="#">e-commerce</router-link>
+                                        <router-link to="#">agency</router-link>
+                                        <router-link to="#">responsive</router-link>
                                     </div>
                                 </aside>
                             </div>
