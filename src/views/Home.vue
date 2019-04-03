@@ -35,20 +35,20 @@
                                     <h2 class="post-title"><router-link to="/posts/1">Sleep&#8212It's frustratingly Important. </router-link></h2>
                                     <ul class="post-meta">
                                         <li><i class="mdi mdi-calendar"></i> April 02, 2019</li>
-                                        <li><i class="mdi mdi-tag-text-outline"></i> <a href="#">Productivity</a>, <a href="#">Sleep</a></li>
+                                        <li><i class="mdi mdi-tag-text-outline"></i> <router-link to="#">Productivity</router-link>, <router-link to="#">Sleep</router-link></li>
                                         <!-- # of comments goes here -->
                                     </ul>
                                 </div>
 
                                 <div class="post-preview">
-                                    <router-link to="/posts/1"><img src="images/blog/blog-1.jpg" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
+                                    <router-link to="/posts/1"><img src="/images/blog/blog-1.jpg" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
                                 </div>
 
                                 <div class="post-content">
                                     <p>When I was an undergraduate engineering student, there was something that I never understood. I frequently found myself putting in late hours, in the computer labs until 2 or 3am finishing long assignments. Why weren’t any of the best students there pulling late nights with me? To understand why...</p>                                         
                                 </div>
 
-                                <div><a href="#" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></a></div>
+                                <div><router-link to="#" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></router-link></div>
 
                             </article>
                             <!-- Post end-->
@@ -57,9 +57,9 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <ul class="pagination">
-                                        <li class="next"><a href="#"><i class="mdi mdi-chevron-left"></i></a></li>
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li class="prev"><a href="#"><i class="mdi mdi-chevron-right"></i></a></li>
+                                        <li class="next"><router-link to="#"><i class="mdi mdi-chevron-left"></i></router-link></li>
+                                        <li class="active"><router-link to="#">1</router-link></li>
+                                        <li class="prev"><router-link to="#"><i class="mdi mdi-chevron-right"></i></router-link></li>
                                     </ul>
                                 </div>
                             </div>
@@ -78,7 +78,7 @@
                                     <div class="widget-title">About Me</div>
 
                                     <div class="text-center">
-                                        <img src="images/photo.jpg" alt="About Me" class="rounded-circle">
+                                        <img src="/images/photo.jpg" alt="About Me" class="rounded-circle">
 
                                         <p>Quis vero phasellus hac nullam, in quam vitae duis adipiscing mauris leo, laoreet eget at quis, ante vestibulum vivamus vel. Sapien lobortis, eget orci purus amet pede, consectetur neque risus.</p>
                                     </div>
@@ -99,10 +99,9 @@
                                 <aside class="widget widget_categories">
                                     <div class="widget-title">Categories</div>
                                     <ul>
-                                        <li><a href="#">Journey</a> (40)</li>
-                                        <li><a href="#">Photography</a> (08)</li>
-                                        <li><a href="#">Lifestyle</a> (11)</li>
-                                        <li><a href="#">Food & Drinks</a> (21)</li>
+                                        <li><router-link to="#">Sleep</router-link> (1)</li>
+                                        <li><router-link to="#">Productivity</router-link> (1)</li>
+                                        <li><router-link to="#">Lifestyle</router-link> (1)</li>
                                     </ul>
                                 </aside>
 
@@ -112,56 +111,24 @@
                                     <ul>
                                         <li class="clearfix">
                                             <div class="wi">
-                                                <a href="#"><img src="images/works/img1.jpg" alt="" class="img-fluid"></a>
+                                                <router-link to="/posts/1"><img src="/images/works/img1.jpg" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid"></router-link>
                                             </div>
-                                            <div class="wb"><a href="#">Beautiful Day With Friends..</a> <span class="post-date">Jun 15, 2017</span></div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="wi">
-                                                <a href="#"><img src="images/works/img2.jpg" alt="" class="img-fluid"></a>
-                                            </div>
-                                            <div class="wb"><a href="#">Nature valley with cooling..</a> <span class="post-date">Jun 10, 2017</span></div>
-                                        </li>
-                                        <li class="clearfix">
-                                            <div class="wi">
-                                                <a href="#"><img src="images/works/img3.jpg" alt="" class="img-fluid"></a>
-                                            </div>
-                                            <div class="wb"><a href="#">15 Best Healthy and Easy Salad..</a> <span class="post-date">Jun 8, 2017</span></div>
+                                            <div class="wb"><router-link to="/posts/1">Sleep&#8212It's frustratingly Important.</router-link> <span class="post-date">April 2, 2019</span></div>
                                         </li>
                                     </ul>
                                 </aside>
 
                                 <!-- Text widget-->
-                                <aside class="widget">
-                                    <div class="widget-title">Text Widget</div>
-
-                                    <p class="text-muted text-widget-des">Exercitation photo booth stumptown tote bag Banksy, elit small batch freegan sed. Craft beer elit seitan exercitation, photo booth et 8-bit kale chips proident chillwave deep v laborum. Aliquip veniam delectus, Marfa eiusmod Pinterest in do umami readymade swag. </p>
-
-                                </aside>
 
                                 <!-- Archives widget-->
-                                <aside class="widget">
-                                    <div class="widget-title">Archives</div>
-
-                                    <ul>
-                                        <li><a href="#">March 2017</a> (40)</li>
-                                        <li><a href="#">April 2017</a> (08)</li>
-                                        <li><a href="#">May 2017</a> (11)</li>
-                                        <li><a href="#">Jun 2017</a> (21)</li>
-                                    </ul>
-
-                                </aside>
 
                                 <!-- Tags widget-->
                                 <aside class="widget widget_tag_cloud">
                                     <div class="widget-title">Tags</div>
                                     <div class="tagcloud">
-                                        <a href="#">logo</a>
-                                        <a href="#">business</a>
-                                        <a href="#">corporate</a>
-                                        <a href="#">e-commerce</a>
-                                        <a href="#">agency</a>
-                                        <a href="#">responsive</a>
+                                        <router-link to="/">Sleep</router-link>
+                                        <router-link to="/">Productivity</router-link>
+                                        <router-link to="/">Lifestyle</router-link>
                                     </div>
                                 </aside>
                             </div>
