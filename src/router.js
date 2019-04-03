@@ -11,7 +11,7 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     { path: '/', name: 'home', component: Home },
-    { path: '/posts/1', name: 'post-1', component: Post1 },
+    { path: '/posts/1', name: 'post', component: Post1 },
     { path: '/about', name: 'about', component: About }
   ]
 })
