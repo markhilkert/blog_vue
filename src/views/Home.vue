@@ -29,13 +29,13 @@
                         <div class="col-xl-8">
 
                             <!-- Post-->
-                            <article class="post">
+                            <article v-for="post in posts" class="post">
 
                                 <div class="post-header">
-                                    <h2 class="post-title"><router-link to="/posts/1">Sleep&#8212It's frustratingly Important. </router-link></h2>
+                                    <h2 class="post-title"><router-link to="/posts/1"> {{ post.title }} </router-link></h2>
                                     <ul class="post-meta">
-                                        <li><i class="mdi mdi-calendar"></i> April 02, 2019</li>
-                                        <li><i class="mdi mdi-tag-text-outline"></i> <router-link to="#">Productivity</router-link>, <router-link to="#">Sleep</router-link></li>
+                                        <li><i class="mdi mdi-calendar"></i> {{ post.date }} </li>
+                                        <li><i class="mdi mdi-tag-text-outline"></i> <router-link v-for="tag in post.formatted.tags" to="#"> {{ tag }} </router-link></li>
                                         <!-- # of comments goes here -->
                                     </ul>
                                 </div>
@@ -147,5 +147,31 @@
 </template>
 
 <script>
+import axios from "axios";
 
+export default {
+  data: function() {
+    return {
+      errors: [],
+      posts: []
+    };
+  },
+  created: function() {
+    axios.get("/api/posts/")
+      .then(response => {
+        this.posts = response.data;
+        console.log(this.posts)
+      });
+  },
+  methods: {
+    functionName: function() {
+      // axios.requestType("url")      
+      // .then(response => {
+        // what to do next
+      // }).catch(error => {
+      //   this.errors = error.response.data.errors;
+      // });
+    }
+  }
+};
 </script>
