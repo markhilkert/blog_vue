@@ -35,7 +35,7 @@
                                     <h2 class="post-title"><router-link to="/posts/1"> {{ post.title }} </router-link></h2>
                                     <ul class="post-meta">
                                         <li><i class="mdi mdi-calendar"></i> {{ post.date }} </li>
-                                        <li><i class="mdi mdi-tag-text-outline"></i> <router-link v-for="tag in post.formatted.tags" to="#"> {{ tag }} </router-link></li>
+                                        <li><i class="mdi mdi-tag-text-outline"></i> <router-link class="comma-list" v-for="(tag, index) in post.tags" v-if="index < post.tags.length - 1" to="#"> {{ tag.name }} </router-link></li>
                                         <!-- # of comments goes here -->
                                     </ul>
                                 </div>
@@ -145,6 +145,16 @@
     <!-- End page -->
   </div>
 </template>
+
+<style>
+/*  .comma-list + .comma-list:before {
+    content: ",";
+  }
+
+  .comma-list > .comma-list:not(:last-child)::after { 
+    content: ", " 
+  }*/
+</style>
 
 <script>
 import axios from "axios";
