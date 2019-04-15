@@ -32,23 +32,24 @@
                             <article v-for="post in posts" class="post">
 
                                 <div class="post-header">
-                                    <h2 class="post-title"><router-link to="/posts/1"> {{ post.title }} </router-link></h2>
+                                    <h2 class="post-title"><router-link v-bind:to="'/posts/' + post.id"> {{ post.title }} </router-link></h2>
                                     <ul class="post-meta">
                                         <li><i class="mdi mdi-calendar"></i> {{ post.date }} </li>
                                         <li><i class="mdi mdi-tag-text-outline"></i> <router-link v-for="tag in post.formatted.tags" to="#"> {{ tag }} </router-link></li>
-                                        <!-- # of comments goes here -->
+                                        <li v-if="post.comments.length === 1"><i class="mdi mdi-comment-multiple-outline"></i> <router-link v-bind:to="'/posts/' + post.id"> 1 Comment</router-link></li>
+                                        <li v-if="post.comments.length !== 1"><i class="mdi mdi-comment-multiple-outline"></i> <router-link v-bind:to="'/posts/' + post.id"> {{ post.comments.length }} Comments</router-link></li>
                                     </ul>
                                 </div>
 
                                 <div class="post-preview">
-                                    <router-link to="/posts/1"><img src="/images/blog/blog-1.jpg" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
+                                    <router-link v-bind:to="'/posts/' + post.id"><img v-bind:src="'/images/blog/blog-' + post.id + '.jpg'" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
                                 </div>
 
                                 <div class="post-content">
-                                    <p>When I was an undergraduate engineering student, there was something that I never understood. I frequently found myself putting in late hours, in the computer labs until 2 or 3am finishing long assignments. Why weren’t any of the best students there pulling late nights with me? To understand why...</p>                                         
+                                    <p> {{ post.preview_text + "..." }} </p>                                         
                                 </div>
 
-                                <div><router-link to="#" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></router-link></div>
+                                <div><router-link v-bind:to="'/posts/' + post.id" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></router-link></div>
 
                             </article>
                             <!-- Post end-->
