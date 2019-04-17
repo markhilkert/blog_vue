@@ -160,7 +160,7 @@ export default {
     };
   },
   created: function() {
-    axios.get("/api/posts/")
+    axios.get("/api/tags/")
       .then(response => {
         this.posts = response.data;
         console.log(this.posts)
@@ -174,19 +174,6 @@ export default {
       // }).catch(error => {
       //   this.errors = error.response.data.errors;
       // });
-    }
-  },
-  computed: {
-    relevantPosts: function() {
-      return this.posts.filter( post => {
-        post.tags.some( tag => {
-          tag.name == "Sleep"
-        })
-        // post.tags.filter( tag => {
-        //   tag.name == "Sleep"
-        //   console.log(tag.name == "Sleep")
-        // }) 
-      });
     }
   }
 };
