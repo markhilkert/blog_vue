@@ -28,45 +28,42 @@
                         <!-- Content-->
                         <div class="col-xl-8">
 
-                            <!-- Post-->
-                            <article v-for="post in posts" class="post">
+                          <!-- Post-->
+                          <article v-for="post in tag.posts" class="post">
+                            <div class="post-header">
+                                <h2 class="post-title"><router-link v-bind:to="'/posts/' + post.id"> {{ post.title }} </router-link></h2>
+                              <ul class="post-meta">
+                                <li><i class="mdi mdi-calendar"></i> {{ post.date }} </li>
+                                <li><i class="mdi mdi-tag-text-outline"></i> <router-link v-for="tag in post.formatted.tags" to="#"> {{ tag }} </router-link></li>
+                                <li v-if="post.number_of_comments === 1"><i class="mdi mdi-comment-multiple-outline"></i> <router-link v-bind:to="'/posts/' + post.id"> 1 Comment</router-link></li>
+                                <li v-if="post.number_of_comments !== 1"><i class="mdi mdi-comment-multiple-outline"></i> <router-link v-bind:to="'/posts/' + post.id"> {{ post.comments.length }} Comments</router-link></li>
+                              </ul>
+                            </div>
 
-                                <p> {{ relevantPosts }} </p>
+                            <div class="post-preview">
+                              <router-link v-bind:to="'/posts/' + post.id"><img v-bind:src="'/images/blog/blog-' + post.id + '.jpg'" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
+                            </div>
 
-                                <div class="post-header">
-                                    <h2 class="post-title"><router-link v-bind:to="'/posts/' + post.id"> {{ post.title }} </router-link></h2>
-                                    <ul class="post-meta">
-                                        <li><i class="mdi mdi-calendar"></i> {{ post.date }} </li>
-                                        <li><i class="mdi mdi-tag-text-outline"></i> <router-link v-for="tag in post.formatted.tags" to="#"> {{ tag }} </router-link></li>
-                                        <li v-if="post.comments.length === 1"><i class="mdi mdi-comment-multiple-outline"></i> <router-link v-bind:to="'/posts/' + post.id"> 1 Comment</router-link></li>
-                                        <li v-if="post.comments.length !== 1"><i class="mdi mdi-comment-multiple-outline"></i> <router-link v-bind:to="'/posts/' + post.id"> {{ post.comments.length }} Comments</router-link></li>
-                                    </ul>
-                                </div>
+                            <div class="post-content">
+                              <p> {{ post.preview_text + "..." }} </p>                                         
+                            </div>
 
-                                <div class="post-preview">
-                                    <router-link v-bind:to="'/posts/' + post.id"><img v-bind:src="'/images/blog/blog-' + post.id + '.jpg'" alt="a cup of coffee and a book rest on a bed in the sunlight" class="img-fluid rounded"></router-link>
-                                </div>
+                            <div><router-link v-bind:to="'/posts/' + post.id" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></router-link></div>
 
-                                <div class="post-content">
-                                    <p> {{ post.preview_text + "..." }} </p>                                         
-                                </div>
-
-                                <div><router-link v-bind:to="'/posts/' + post.id" class="btn btn-outline-custom">Read More <i class="mdi mdi-arrow-right"></i></router-link></div>
-
-                            </article>
+                          </article>
                             <!-- Post end-->
 
-                            <!-- Pagination-->
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <ul class="pagination">
-                                        <li class="next"><router-link to="#"><i class="mdi mdi-chevron-left"></i></router-link></li>
-                                        <li class="active"><router-link to="#">1</router-link></li>
-                                        <li class="prev"><router-link to="#"><i class="mdi mdi-chevron-right"></i></router-link></li>
-                                    </ul>
-                                </div>
+                          <!-- Pagination-->
+                          <div class="row">
+                            <div class="col-lg-12">
+                              <ul class="pagination">
+                                <li class="next"><router-link to="#"><i class="mdi mdi-chevron-left"></i></router-link></li>
+                                <li class="active"><router-link to="#">1</router-link></li>
+                                <li class="prev"><router-link to="#"><i class="mdi mdi-chevron-right"></i></router-link></li>
+                              </ul>
                             </div>
-                            <!-- Pagination end-->
+                          </div>
+                          <!-- Pagination end-->
                         </div>
                         <!-- Content end-->
 
@@ -156,14 +153,18 @@ export default {
   data: function() {
     return {
       errors: [],
-      posts: []
+      tag: {
+            name: "",
+            id: "",
+            posts: []
+            }
     };
   },
   created: function() {
-    axios.get("/api/tags/")
+    axios.get("/api/tags/" + this.$route.params.name)
       .then(response => {
-        this.posts = response.data;
-        console.log(this.posts)
+        this.tag = response.data;
+        console.log(this.tag)
       });
   },
   methods: {
